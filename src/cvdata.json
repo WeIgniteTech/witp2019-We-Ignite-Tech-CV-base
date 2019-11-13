@@ -1,0 +1,12 @@
+{
+	"personer": [
+		{
+			"name": "Rahaf",
+			"age": 25
+		},
+		{
+			"name": "Nam",
+			"age": 28
+		}
+	]
+}
