@@ -6,6 +6,7 @@ import cvAdd from './cvadd';
 import cvSearch from './cvsearch';
 import cvExport from './cvexport';
 import cvShow from './cvshow';
+import cvList from './cvlist';
 
 const newName = ''
 
