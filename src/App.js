@@ -8,19 +8,23 @@ import cvExport from './cvexport';
 import cvShow from './cvshow';
 import cvList from './cvlist';
 
-const newName = ''
+const listOfCV= cvList();
+console.log('list of CV: ',listOfCV);
+
+const searchName=''
 
 function App() {
   return (
     <div>
       <ApiDateResourceProvider>
         <Frontpage logo={logo} />
+        {cvShow(listOfCV)}
         <button>Show all</button>
         <button>Add</button>
         <button>Export CV</button>
         <form onSubmit={cvSearch}>
           <div>
-            name: <input value={newName} />
+            name: <input value={searchName}/>
           </div>
           <div>
             <button type="submit">Search name</button>

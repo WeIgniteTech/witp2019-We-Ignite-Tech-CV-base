@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react'
+import cvData from './cvdata';
 
-// to load data from json file to array
+// to load data from json file
+// return an array of CV objects
+const listofCV= cvData.personer;
+
 function cvList() {
-  return (
-    <div>
-
-    </div>
-  );
+    return listofCV
 }
 
 export default cvList;
