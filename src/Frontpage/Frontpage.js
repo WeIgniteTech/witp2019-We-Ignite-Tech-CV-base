@@ -8,7 +8,7 @@ const Frontpage = (props) => {
         <header className="Frontpage-header">
           <img src={props.logo} className="Frontpage-logo" alt="logo" />
           <p>
-            Welcome to your application!
+            Welcome to WIT CV database!
           </p>
           <DisplayDate/>
         </header>

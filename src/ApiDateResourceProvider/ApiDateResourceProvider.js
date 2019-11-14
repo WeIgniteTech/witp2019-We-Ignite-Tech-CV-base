@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 
-
-const defaultDateResource = {today: 'NO DATA'};
+const d= new Date();
+console.log(d)
+const datefull=d.getDate()+'.'+d.getMonth()+'.'+d.getFullYear()
+const defaultDateResource = {today: datefull};
 export const DateResourceContext = React.createContext(defaultDateResource);
 
 const ApiDateResourceProvider = (props) => {
     const [dateResourceState, setDateResourceState] = useState(
-        defaultDateResource
+            defaultDateResource
     );
 
     useEffect(() => {
