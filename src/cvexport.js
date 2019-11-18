@@ -1,41 +1,18 @@
 import React from 'react';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import ReactPDF from '@react-pdf/renderer';
-//export CV to PDF
-//https://react-pdf.org/
-//create style
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: 'row',
-    backgroundColor: '#E4E4E4'
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1
-  }
-});
+import * as jsPDF from 'jspdf'
 
-// Create Document Component
-const MyDocument = () => (
-  <Document>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text>Name:Age:</Text>
-      </View>
-    </Page>
-  </Document>
-);
+//object to create PDF
+let doc = new jsPDF()
+let textOut = ''
 
- function cvExport(exportList) {
+const cvExport = (exportList) => {
   console.log('exportList :', exportList)
-  const listItems = exportList.map((item) =>
-    <View style={styles.section}>
-      <Text>Name: {item.name} Age: {item.age}</Text>
-    </View>
-   );
+  exportList.map((item) => {
+    textOut += 'Name:' + item.name + '   Age:' + item.age + '\r\n'
+  })
+    console.log(textOut)
+    doc.text(textOut,10,10)
+    doc.save('cvListExport.pdf')
 }
-
-ReactPDF.render(<MyDocument/>, `./cvlist.pdf`);
 
 export default cvExport;

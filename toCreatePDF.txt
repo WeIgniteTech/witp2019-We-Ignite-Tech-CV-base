@@ -1,0 +1,36 @@
+https://www.npmjs.com/package/jspdf
+Using yarn:
+
+yarn add jspdf
+Using npm:
+
+npm install jspdf --save
+
+In some frameworks you have to import jsPDF like this:
+import * as jsPDF from 'jspdf'
+
+import jsPDF from 'jspdf';
+You can add jsPDF to your meteor-project as follows:
+
+meteor add jspdf:core
+
+
+------------------
+Then you're ready to start making your document:
+
+// Default export is a4 paper, portrait, using milimeters for units
+var doc = new jsPDF()
+ 
+doc.text('Hello world!', 10, 10)
+doc.save('a4.pdf')
+If you want to change the paper size, orientation, or units, you can do:
+
+// Landscape export, 2×4 inches
+var doc = new jsPDF({
+  orientation: 'landscape',
+  unit: 'in',
+  format: [4, 2]
+})
+ 
+doc.text('Hello world!', 1, 1)
+doc.save('two-by-four.pdf')
