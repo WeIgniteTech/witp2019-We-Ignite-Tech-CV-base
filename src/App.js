@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import Frontpage from './Frontpage/Frontpage';
 import ApiDateResourceProvider from './ApiDateResourceProvider/ApiDateResourceProvider';
@@ -11,7 +11,10 @@ import cvList from './cvlist';
 const listOfCV= cvList();
 console.log('list of CV: ',listOfCV);
 
+//object to store searched string
 const searchName=''
+
+const stopDefault = (event) => event.preventDefault()
 
 function App() {
   return (
@@ -20,14 +23,14 @@ function App() {
         <Frontpage logo={logo} />
         {cvShow(listOfCV)}
         
-        <form onSubmit={cvAdd}><button>Add</button></form>
-        <form onSubmit={cvExport(listOfCV)}><button>Export CV</button></form>
-        <form onSubmit={cvSearch}>
+        <form ><button onClick={cvAdd}>Add</button></form>
+        <form onSubmit={stopDefault}><button onClick={cvExport(listOfCV)}>Export CV</button></form>
+        <form >
           <div>
             name: <input value={searchName}/>
           </div>
           <div>
-            <button type="submit">Search name</button>
+            <button onClick={cvSearch}>Search name</button>
           </div>
         </form>
       </ApiDateResourceProvider>
