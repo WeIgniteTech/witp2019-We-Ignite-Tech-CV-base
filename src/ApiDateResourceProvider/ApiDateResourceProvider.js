@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const d= new Date();
 console.log(d)
-const datefull=d.getDate()+'.'+d.getMonth()+'.'+d.getFullYear()
+const datefull=d.getDate()+'.'+ (d.getMonth()+1)+'.'+d.getFullYear()
 const defaultDateResource = {today: datefull};
 export const DateResourceContext = React.createContext(defaultDateResource);
 
