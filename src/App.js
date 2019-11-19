@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import Frontpage from './Frontpage/Frontpage';
 import ApiDateResourceProvider from './ApiDateResourceProvider/ApiDateResourceProvider';
-import cvAdd from './cvadd'; //Mhran
-import cvSearch from './cvsearch'; //Rahab
-import cvExport from './cvexport'; //Nam
+import cvAdd from './cvadd'; //Mhran - legg til ny CV
+import cvSearch from './cvsearch'; //Rahah - ser etter CV med et navn
+import cvExport from './cvexport'; //Nam - exporterer valgt CVer til PDF
 import cvShow from './cvshow';  // viser alle CVer på nettsider
 import cvList from './cvlist'; // leser data fra cvdata.json
 
