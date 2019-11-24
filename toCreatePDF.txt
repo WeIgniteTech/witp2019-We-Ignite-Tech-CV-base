@@ -34,3 +34,10 @@ var doc = new jsPDF({
  
 doc.text('Hello world!', 1, 1)
 doc.save('two-by-four.pdf')
+
+
+
+-------------
+create section and scroll function
+https://scotch.io/tutorials/implementing-smooth-scrolling-in-react
+npm i -S react-scroll

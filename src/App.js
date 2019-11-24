@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Navbar from "./Components/Navbar";
-import Section from "./Components/Section";
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './Components/Navbar';
+import Section from './Components/Section';
 
 import cvAdd from './cvadd'; //Mhran - legg til ny CV
 import cvSearch from './cvsearch'; //Rahah - ser etter CV med et navn
@@ -17,28 +17,45 @@ console.log('list of CV: ', listOfCV);
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <Navbar />
         <Section
-          title="Welcome to WIT CV database"
-          subtitle="CVs of all employees"
-          htmlcode={cvShow(listOfCV)}
+          title='Welcome to WIT CV database'
+          subtitle='The We Ignite Tech program is a three month evening course aiming to get people with a tech background closer to the norwegian IT market. The first iteration of the We Ignite Tech program has just finished. Twelve participants just graduated and some of them have already steped into the IT market. 
+          Enlighted by this positive experience, 
+          we will start a new session of the program in september 2019.
+          A Step Closer To Your IT Career In Norway.
+          ACCURATE TECHNOLOGIES:
+          The program is based on modern and well used technologies (programming languages, frameworks, tools and methodologies).
+          INDUSTRY STANDARDS:
+          Course material is based on our teachers experience from the field in the norwegian and international IT industry.
+          The We Ignite Tech program is a three month evening course aiming to get people with a tech background closer to the norwegian IT market. The first iteration of the We Ignite Tech program has just finished. Twelve participants just graduated and some of them have already steped into the IT market. 
+          Enlighted by this positive experience, 
+          we will start a new session of the program in september 2019.
+          A Step Closer To Your IT Career In Norway.
+          ACCURATE TECHNOLOGIES:
+          The program is based on modern and well used technologies (programming languages, frameworks, tools and methodologies).
+          INDUSTRY STANDARDS:
+          Course material is based on our teachers experience from the field in the norwegian and international IT industry.
+'
           dark={true}
-          id="section1"
+          id='section1'
+          htmlcode={cvShow(listOfCV)}
         >
-          {cvShow(listOfCV)}
         </Section>
         <Section
-          title="Search CV"
-          subtitle='Search CV by name'
+          title='Search CV'
+          subtitle='Enter a name to search'
           dark={false}
-          id="section2"
+          id='section2'
+          htmlcode={cvSearch()}
         />
         <Section
-          title="Add CV"
-          subtitle='Add a new CV to the database'
+          title='Add CV'
+          subtitle='Enter detail of an employee'
           dark={true}
-          id="section3"
+          id='section3'
+          htmlcode={cvAdd()}
         />
       </div>
     );
