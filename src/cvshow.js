@@ -6,8 +6,8 @@ import cvList from './cvlist';
 
 function cvShow(listOfCV) {
   console.log('props: ',listOfCV)
-  
-  const listItems = listOfCV.map((item) =>
+
+  const listItems = listOfCV.map((item,i) =>
   <li key={Math.random()}>
     Name: {item.name} Age: {item.age}
   </li>
