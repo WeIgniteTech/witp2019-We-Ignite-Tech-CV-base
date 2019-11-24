@@ -20,7 +20,6 @@ function App() {
       <ApiDateResourceProvider>
         <Frontpage logo={logo} />
         {cvShow(listOfCV)}
-
         <form ><button onClick={() => cvAdd} >Add</button></form>
         <form ><button onClick={() => cvExport(listOfCV)} > Export CV</button></form>
         <form >
