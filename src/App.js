@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Section from './Components/Section';
 
-import cvAdd from './cvadd'; //Mhran - legg til ny CV
-import cvSearch from './cvsearch'; //Rahah - ser etter CV med et navn
-import cvExport from './cvexport'; //Nam - exporterer valgt CVer til PDF
-import cvShow from './cvshow';  // viser alle CVer på nettsider
-import cvList from './cvlist'; // leser data fra cvdata.json
+import CvAdd from './cvadd'; //Mhran - legg til ny CV
+import CvSearch from './cvsearch'; //Rahah - ser etter CV med et navn
+import CvExport from './cvexport'; //Nam - exporterer valgt CVer til PDF
+import CvShow from './cvshow';  // viser alle CVer på nettsider
+import CvList from './cvlist'; // leser data fra cvdata.json
 
-const listOfCV = cvList();
+const listOfCV = CvList();
 console.log('list of CV: ', listOfCV);
 
 
@@ -40,7 +39,7 @@ class App extends Component {
 '
           dark={true}
           id='section1'
-          htmlcode={cvShow(listOfCV)}
+          htmlcode={CvShow(listOfCV)}
         >
         </Section>
         <Section
@@ -48,14 +47,14 @@ class App extends Component {
           subtitle='Enter a name to search'
           dark={false}
           id='section2'
-          htmlcode={cvSearch(listOfCV)}
+          htmlcode={CvSearch(listOfCV)}
         />
         <Section
           title='Add CV'
           subtitle='Enter detail of an employee'
           dark={true}
           id='section3'
-          htmlcode={cvAdd()}
+          htmlcode={CvAdd()}
         />
       </div>
     );

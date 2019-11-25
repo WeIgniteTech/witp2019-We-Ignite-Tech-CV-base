@@ -3,10 +3,10 @@ import cvData from './cvdata';
 
 // to load data from json file
 // return an array of CV objects
-const listofCV= cvData.personer;
+const listOfCV= cvData.personer;
 
-function cvList() {
-    return listofCV
+function CvList() {
+    return listOfCV
 }
 
-export default cvList;
+export default CvList;

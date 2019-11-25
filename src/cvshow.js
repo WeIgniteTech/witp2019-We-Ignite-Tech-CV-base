@@ -4,8 +4,8 @@ import cvList from './cvlist';
 // to show all available CVs
 
 
-function cvShow(listOfCV) {
-  console.log('props: ',listOfCV)
+const CvShow = (listOfCV) => {
+  console.log('props cvShow: ',listOfCV)
 
   const listItems = listOfCV.map((item,i) =>
   <li key={Math.random()}>
@@ -17,4 +17,4 @@ function cvShow(listOfCV) {
   );
 }
 
-export default cvShow;
+export default CvShow;

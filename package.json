@@ -14,6 +14,7 @@
     "koa-static": "^5.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-native": "^0.61.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-scroll": "^1.7.14"

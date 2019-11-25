@@ -1,10 +1,10 @@
 import React from 'react';
 
 // to add new CVs
-const addCV = () => {
+const AddCV = () =>{
 
 }
-function cvAdd() {
+const CvAdd = () => {
   return (
     <div>
       <form >
@@ -15,10 +15,10 @@ function cvAdd() {
           Age: <input />
         </div>
         <div>
-          <button onClick={() => addCV()}>Add</button></div>
+          <button onClick={() => AddCV()}>Add</button></div>
       </form>
     </div>
   );
 }
 
-export default cvAdd;
+export default CvAdd;
