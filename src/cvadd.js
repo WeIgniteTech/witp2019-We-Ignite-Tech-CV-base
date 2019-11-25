@@ -39,11 +39,8 @@ const CvAdd = (listOfCV) => {
 
   const writeJsonFile = require('write-json-file')
   const SaveCV = (event) => {
-   
-      (async () => {
-        await writeJsonFile('cvdata.json', { listOfCV: true })
-      })();
-      event.preventDefault()
+    writeJsonFile.sync('cvdata.json', listOfCV)
+    event.preventDefault()
   }
   return (
     <div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CvExport from './cvexport';
 
 //search CV by name
 
@@ -8,15 +9,17 @@ const CvSearch = (listOfCV) => {
     console.log('target: ', event.target.value)
     nameToSearch = event.target.value
   }
+  let found = 0
+
   //console.log('props cvSearch:', listOfCV)
   const foundCV = listOfCV[0]
   let nameToSearch = ''
-  const searchName = (event) => {
+  const SearchName = (event) => {
     event.preventDefault()
-    console.log('Event:',event)
+    console.log('Event:', event)
     console.log('Search pressed. Name to search is:', nameToSearch)
-    event.target.value=''
-    let found = 0
+    event.target.value = ''
+
     listOfCV.map((item) => {
       if (item.name === nameToSearch) {
         found = 1
@@ -32,15 +35,29 @@ const CvSearch = (listOfCV) => {
     } else window.alert('CV is not found')
 
   }
-
+  const ExportCV = (event) => {
+    event.preventDefault()
+    if (found!==1) {
+      window.alert('There is no CV for exporting')
+    } else (
+      CvExport(foundCV)
+    )
+  }
   return (
     <div>
-      <form onSubmit={searchName}>
+      <form onSubmit={SearchName}>
         <div>
           <input onChange={handleNameChange} />
         </div>
         <div>
           <button type="submit">Search</button></div>
+      </form>
+      <form onSubmit={ExportCV}>
+        <div>
+         
+        </div>
+        <div>
+          <button type="submit">Export selected CV to PdF</button></div>
       </form>
     </div>
     //{cvFound}
