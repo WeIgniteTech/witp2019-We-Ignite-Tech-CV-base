@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 //search CV by name
 
 const CvSearch = (listOfCV) => {
-  console.log('props cvSearch:', listOfCV)
-  const [newName, setNewName] = useState('')
+  //const [newName, setNewName] = useState(0)
   const handleNameChange = (event) => {
     console.log('target: ', event.target.value)
     nameToSearch = event.target.value
   }
+  //console.log('props cvSearch:', listOfCV)
   const foundCV = listOfCV[0]
   let nameToSearch = ''
   const searchName = (event) => {
