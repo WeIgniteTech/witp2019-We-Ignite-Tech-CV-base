@@ -54,7 +54,7 @@ class App extends Component {
           subtitle='Enter detail of an employee'
           dark={true}
           id='section3'
-          htmlcode={CvAdd()}
+          htmlcode={CvAdd(listOfCV)}
         />
       </div>
     );
