@@ -48,7 +48,7 @@ class App extends Component {
           subtitle='Enter a name to search'
           dark={false}
           id='section2'
-          htmlcode={cvSearch()}
+          htmlcode={cvSearch(listOfCV)}
         />
         <Section
           title='Add CV'
