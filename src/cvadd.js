@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CvShow from './cvshow'
 
 // to add new CVs
 
@@ -29,19 +30,21 @@ const CvAdd = (listOfCV) => {
       window.alert(warning)
     } else {
       listOfCV.push(person)
-      console.log('CV full after added', listOfCV)
-      window.alert('CV was added')
+      //console.log('CV full after added', listOfCV)
+      let showString='CV was added'
+      listOfCV.map((item,i)=>{
+        showString+='\r\n'
+        showString+=(i+1).toString()+ '. Name: '
+        showString+=item.name
+        showString+='     Age: '
+        showString+=item.age
+        
+      })
+      console.log(showString)
+      window.alert(showString)
     }
   }
 
-  //Save to json file
-  //https://stackabuse.com/reading-and-writing-json-files-with-node-js/
-
-  const writeJsonFile = require('write-json-file')
-  const SaveCV = (event) => {
-    writeJsonFile.sync('cvdata.json', listOfCV)
-    event.preventDefault()
-  }
   return (
     <div>
       <form onSubmit={AddCV}>
@@ -52,16 +55,11 @@ const CvAdd = (listOfCV) => {
           Age: <input onChange={handleAgeChange} /></div>
         <div>
           <button type="submit">add</button>
-
-        </div>
-      </form>
-      <form onSubmit={SaveCV}>
-        <div>
-          <p>Press SAVE to confirm your work</p>
-          <button type="submit">SAVE</button>
         </div>
       </form>
     </div>
+    
+
   );
 }
 

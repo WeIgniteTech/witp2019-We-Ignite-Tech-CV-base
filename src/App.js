@@ -32,7 +32,7 @@ class App extends Component {
           The We Ignite Tech program is a three month evening course aiming to get people with a tech background closer to the norwegian IT market. The first iteration of the We Ignite Tech program has just finished. Twelve participants just graduated and some of them have already steped into the IT market. 
           Enlighted by this positive experience, 
           we will start a new session of the program in september 2019.
-  
+          
           A Step Closer To Your IT Career In Norway.
           ACCURATE TECHNOLOGIES:
           The program is based on modern and well used technologies (programming languages, frameworks, tools and methodologies).

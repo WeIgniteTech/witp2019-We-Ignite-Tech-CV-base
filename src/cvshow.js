@@ -9,7 +9,7 @@ const CvShow = (listOfCV) => {
 
   const listItems = listOfCV.map((item,i) =>
   <li key={Math.random()}>
-    Name: {item.name} Age: {item.age}
+    Name: {item.name}   Age: {item.age}
   </li>
 );
   return (
