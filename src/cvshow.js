@@ -5,15 +5,24 @@ import cvList from './cvlist';
 
 
 const CvShow = (listOfCV) => {
-  console.log('props cvShow: ',listOfCV)
+  console.log('props cvShow: ', listOfCV)
 
-  const listItems = listOfCV.map((item,i) =>
-  <li key={Math.random()}>
-    Name: {item.name} Age: {item.age}
-  </li>
-);
+  const listItems = listOfCV.map((item, i) =>
+    <tr>
+      <td>{i + 1}.</td><td> {item.name}</td><td></td><td>{item.age}</td>
+    </tr>
+  );
   return (
-    <ul> {listItems}</ul>
+    <div>
+      <p></p>
+      <table>
+        <th>No.</th><th>Name</th><th></th><th>Age</th>
+        <col width="10" />
+        <col width="20" />
+        <col width="20" />
+        {listItems}
+      </table>
+    </div>
   );
 }
 
