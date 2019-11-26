@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react';
 import CvExport from './cvexport';
 
 //search CV by name
 
 const CvSearch = (listOfCV) => {
-  //const [newName, setNewName] = useState(0)
+
   const handleNameChange = (event) => {
     console.log('target: ', event.target.value)
     nameToSearch = event.target.value
@@ -30,7 +30,7 @@ const CvSearch = (listOfCV) => {
     console.log('Found: ', found)
     console.log('Search name:', nameToSearch)
     if (found === 1) {
-      const textFound = 'Name: ' + foundCV.name + '    Age: ' + foundCV.age
+      const textFound = 'CV found. \r\nName: ' + foundCV.name + '    Age: ' + foundCV.age
       window.alert(textFound)
     } else window.alert('CV is not found')
 
@@ -57,10 +57,10 @@ const CvSearch = (listOfCV) => {
          
         </div>
         <div>
-          <button type="submit">Export selected CV to PdF</button></div>
+          <button type="submit">Export the selected CV to PdF</button></div>
       </form>
     </div>
-    //{cvFound}
+
   );
 }
 

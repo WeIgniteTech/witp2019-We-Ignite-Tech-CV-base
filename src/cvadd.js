@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // to add new CVs
 
 let newAge = ''
 let newName = ''
 const CvAdd = (listOfCV) => {
-  // const [persons, setPersons] = useState('')
-  // const [newName, setNewName] = useState('')
-  // const [newAge, setNewAge] = useState('')
   console.log('list CV in CvAdd', listOfCV)
   const handleNameChange = (event) => {
     console.log('Target Name: ', event.target.value)
@@ -30,39 +27,31 @@ const CvAdd = (listOfCV) => {
     } else {
       listOfCV.push(person)
       console.log('CV full after added', listOfCV)
-      window.alert('CV was added')
+      let showString=person.name.toString()+' was added'
+      window.alert(showString)
+      showString='List of CVs \r\n'+'Name and age \r\n'
+      listOfCV.map((item,i) => {
+        showString+=((i+1).toString()) +'. '+ item.name + '  - ' + item.age + '\r\n'
+      })
+      window.alert(showString)
     }
   }
 
-  //Save to json file
-  //https://stackabuse.com/reading-and-writing-json-files-with-node-js/
 
-  const writeJsonFile = require('write-json-file')
-  const SaveCV = (event) => {
-    writeJsonFile.sync('cvdata.json', listOfCV)
-    event.preventDefault()
-  }
-  return (
-    <div>
-      <form onSubmit={AddCV}>
-        <div>
-          Name: <input onChange={handleNameChange} />
-        </div>
-        <div>
-          Age: <input onChange={handleAgeChange} /></div>
-        <div>
-          <button type="submit">add</button>
-
-        </div>
-      </form>
-      <form onSubmit={SaveCV}>
-        <div>
-          <p>Press SAVE to confirm your work</p>
-          <button type="submit">SAVE</button>
-        </div>
-      </form>
+return (
+  <div>
+    <form onSubmit={AddCV}>
+      <table>
+        <tr><td>Name: </td><td><input onChange={handleNameChange} /></td></tr>
+      
+      
+        <tr><td>Age: </td><td><input onChange={handleAgeChange} /></td></tr>
+      
+        <tr><td></td><td align='center'><button type="submit">Add</button></td></tr>
+        </table>
+    </form>
     </div>
-  );
+);
 }
 
 export default CvAdd;

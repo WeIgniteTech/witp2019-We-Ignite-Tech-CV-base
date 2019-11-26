@@ -1,4 +1,3 @@
-import React from 'react';
 import * as jsPDF from 'jspdf'
 // npm install jspdf --save
 // import * as jsPDF from 'jspdf'
@@ -6,7 +5,6 @@ import * as jsPDF from 'jspdf'
 
 //object to create PDF
 let doc = new jsPDF()
-let textOut = ''
 const CvExport = (item) =>{
 
 const CvExportList = (exportList) => {

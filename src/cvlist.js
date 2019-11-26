@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import cvData from './cvdata';
 
 // to load data from json file

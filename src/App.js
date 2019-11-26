@@ -5,7 +5,7 @@ import Section from './Components/Section';
 
 import CvAdd from './cvadd'; //Mhran - legg til ny CV
 import CvSearch from './cvsearch'; //Rahah - ser etter CV med et navn
-import CvExport from './cvexport'; //Nam - exporterer valgt CVer til PDF
+
 import CvShow from './cvshow';  // viser alle CVer på nettsider
 import CvList from './cvlist'; // leser data fra cvdata.json
 
@@ -53,7 +53,7 @@ class App extends Component {
         />
         <Section
           title='Add CV'
-          subtitle='Enter detail of an employee'
+          subtitle='Enter detail of the employee'
           dark={true}
           id='section3'
           htmlcode={CvAdd(listOfCV)}
