@@ -29,7 +29,7 @@ const CvShow = (listOfCV) => {
       </div>
       <div>
         <form onSubmit={ExportCV}>
-          <button type="submit">Export all to PDF</button>
+          <button type="submit">Export to PDF</button>
         </form>
       </div>
     </div>
