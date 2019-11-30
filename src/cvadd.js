@@ -44,7 +44,9 @@ const CvAdd = (listOfCV) => {
     // console.log('add List length:', newCV.length)
     if (newCV.stage === 0) {
       return (
-        <p></p>
+        <div>
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
       )
     } else {
       console.log('List add CV:',newCV)
@@ -52,6 +54,7 @@ const CvAdd = (listOfCV) => {
         <div>
           <p>Added CV</p>
           {CvShow(newCV)}
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
       )
     }
