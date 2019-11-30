@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Section from './Components/Section';
@@ -9,12 +9,12 @@ import CvSearch from './cvsearch'; //Rahah - ser etter CV med et navn
 import CvShow from './cvshow';  // viser alle CVer på nettsider
 import CvList from './cvlist'; // leser data fra cvdata.json
 
+
+
 const listOfCV = CvList();
 console.log('list of CV: ', listOfCV);
 
-
-class App extends Component {
-  render() {
+function App() {
     return (
       <div className='App'>
         <Navbar />
@@ -24,7 +24,7 @@ class App extends Component {
           Enlighted by this positive experience, 
           we will start a new session of the program in september 2019.
           A Step Closer To Your IT Career In Norway.
-          \r\n
+          </br> n
           ACCURATE TECHNOLOGIES:
           The program is based on modern and well used technologies (programming languages, frameworks, tools and methodologies).
           INDUSTRY STANDARDS:
@@ -61,6 +61,6 @@ class App extends Component {
       </div>
     );
   }
-}
+
 
 export default App;
