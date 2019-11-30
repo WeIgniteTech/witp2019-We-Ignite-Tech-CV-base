@@ -6,7 +6,7 @@ import CvExport from './cvexport';
 
 
 const CvShow = (listOfCV) => {
-  console.log('props cvShow: ', listOfCV)
+ // console.log('props cvShow: ', listOfCV)
 
   const listItems = listOfCV.map((item, i) =>
     <tr id={i.toString()}>

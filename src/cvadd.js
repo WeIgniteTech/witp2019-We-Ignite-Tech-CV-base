@@ -5,7 +5,7 @@ import React from 'react'
 let newAge = ''
 let newName = ''
 const CvAdd = (listOfCV) => {
-  console.log('list CV in CvAdd', listOfCV)
+  //console.log('list CV in CvAdd', listOfCV)
   const handleNameChange = (event) => {
     console.log('Target Name: ', event.target.value)
     newName = event.target.value
