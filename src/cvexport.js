@@ -22,16 +22,9 @@ const CvExport = (item) => {
     })
     doc.save('cvListExport.pdf')
   }
-  const CvExportItem = (exportItem) => {
-    console.log('export item :', exportItem)
-    doc.text('Name:' + exportItem.name + '   Age:' + exportItem.age + '\r\n', 10, 10)
-    doc.save('cvListExport.pdf')
-  }
 
-  //Decide which type of code and run
-  if (Array.isArray(item)) {
     CvExportList(item)
-  } else { CvExportItem(item) }
+
 }
 
 export default CvExport;

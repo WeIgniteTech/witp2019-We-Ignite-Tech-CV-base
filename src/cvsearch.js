@@ -17,16 +17,16 @@ const CvSearch = (listOfCV) => {
       console.log('CV is found')
       return (
         <div>
-          {CvShow(newSearch.foundCV)}
+        {CvShow(newSearch.foundCV)}
         </div>
-      )
+    )
     };
     if (newSearch.found === 0) {
-      //  console.log('CV is not found')
+    //  console.log('CV is not found')
       return (<p>CV is not found</p>)
     };
     if (newSearch.found === -1) {
-      //    console.log('Search is not running')
+  //    console.log('Search is not running')
       return (<p></p>)
     };
   }
@@ -48,11 +48,11 @@ const CvSearch = (listOfCV) => {
   }
   const ExportCV = (event) => {
     event.preventDefault()
-    CvExport(newSearch.foundCV[0])
+      CvExport(newSearch.foundCV[0])
   }
 
   const handleNameChange = (event) => {
-    //   console.log('target: ', event.target.value)
+ //   console.log('target: ', event.target.value)
     setCvName(event.target.value)
   }
 

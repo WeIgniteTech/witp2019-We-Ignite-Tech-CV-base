@@ -6,6 +6,7 @@
     "@react-pdf/renderer": "^1.6.8",
     "http-status": "^1.4.0",
     "jspdf": "^1.5.3",
+    "jspdf-autotable": "^3.2.11",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-logger": "^3.2.1",
