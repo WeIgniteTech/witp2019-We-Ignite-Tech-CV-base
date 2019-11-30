@@ -11,12 +11,10 @@ const CvSearch = (listOfCV) => {
     setCvName(event.target.value)
   }
   let found = 0
-  let resultSearch = ''
   //console.log('props cvSearch:', listOfCV)
-  const foundCV = listOfCV[0]
-  const CvSearchShow = () => {
-    CvShow(foundCV)
-  }
+  const foundCV = [{name:''},{age:''}]
+  let resultSearch=''
+
   const SearchName = (event) => {
     event.preventDefault()
     //console.log('Event:', event)
@@ -25,8 +23,8 @@ const CvSearch = (listOfCV) => {
     listOfCV.map((item) => {
       if (item.name === newCvName) {
         found = 1
-        foundCV.name = item.name
-        foundCV.age = item.age
+        foundCV[0].name = item.name
+        foundCV[0].age = item.age
       }
     })
     console.log('Found: ', found)
@@ -35,11 +33,11 @@ const CvSearch = (listOfCV) => {
       const textFound = 'CV found. \r\nName: ' + foundCV.name + '    Age: ' + foundCV.age
       //window.alert(textFound)
       resultSearch = 'CV found'
-      CvSearchShow()
+      
       setCvName('')
     } else {
       resultSearch = 'CV is not found'
-      CvSearchShow()
+
       setCvName('')
     }
   }
@@ -65,7 +63,7 @@ const CvSearch = (listOfCV) => {
 
           </div>
           <div>
-            {CvSearchShow}
+            {returnSearch}
             <button type="submit">Export the selected CV to PdF</button></div>
         </form>
       </div>
