@@ -12,17 +12,21 @@ const CvSearch = (listOfCV) => {
   })
 
   const resultSearch = () => {
-    console.log('Found after run:', newSearch.found)
+    //console.log('Found after run:', newSearch.found)
     if (newSearch.found === 1) {
       console.log('CV is found')
-    return (<p>Name: {newSearch.foundCV[0].name}    Age: {newSearch.foundCV[0].age}</p>)
+      return (
+        <div>
+          {CvShow(newSearch.foundCV)}
+        </div>
+      )
     };
     if (newSearch.found === 0) {
-      console.log('CV is not found')
+      //  console.log('CV is not found')
       return (<p>CV is not found</p>)
     };
     if (newSearch.found === -1) {
-      console.log('Search is not running')
+      //    console.log('Search is not running')
       return (<p></p>)
     };
   }
@@ -44,15 +48,11 @@ const CvSearch = (listOfCV) => {
   }
   const ExportCV = (event) => {
     event.preventDefault()
-    if (newSearch.found !== 1) {
-      window.alert('There is no CV for exporting')
-    } else (
-      CvExport(newSearch.foundCV[0])
-    )
+    CvExport(newSearch.foundCV[0])
   }
 
   const handleNameChange = (event) => {
-    console.log('target: ', event.target.value)
+    //   console.log('target: ', event.target.value)
     setCvName(event.target.value)
   }
 
@@ -65,13 +65,7 @@ const CvSearch = (listOfCV) => {
         <div>
           <button type="submit">Search</button></div>
       </form>
-      <form onSubmit={ExportCV}>
-        <div>
 
-        </div>
-        <div>
-          <button type="submit">Export the selected CV to PdF</button></div>
-      </form>
       {resultSearch()}
     </div>
 
