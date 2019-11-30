@@ -27,31 +27,30 @@ const CvAdd = (listOfCV) => {
     } else {
       listOfCV.push(person)
       console.log('CV full after added', listOfCV)
-      let showString=person.name.toString()+' was added'
+      let showString = person.name.toString() + ' was added'
       window.alert(showString)
-      showString='List of CVs \r\n'+'Name and age \r\n'
-      listOfCV.map((item,i) => {
-        showString+=((i+1).toString()) +'. '+ item.name + '  - ' + item.age + '\r\n'
+      showString = 'List of CVs \r\n' + 'Name and age \r\n'
+      listOfCV.map((item, i) => {
+        showString += ((i + 1).toString()) + '. ' + item.name + '  - ' + item.age + '\r\n'
       })
       window.alert(showString)
     }
   }
 
 
-return (
-  <div>
-    <form onSubmit={AddCV}>
-      <table>
-        <tr><td>Name: </td><td><input onChange={handleNameChange} /></td></tr>
-      
-      
-        <tr><td>Age: </td><td><input onChange={handleAgeChange} /></td></tr>
-      
-        <tr><td></td><td align='center'><button type="submit">Add</button></td></tr>
+  return (
+    <div>
+      <form onSubmit={AddCV}>
+        <table>
+          <tbody>
+            <tr><td>Name: </td><td><input onChange={handleNameChange} /></td></tr>
+            <tr><td>Age: </td><td><input onChange={handleAgeChange} /></td></tr>
+            <tr><td></td><td align='center'><button type="submit">Add</button></td></tr>
+          </tbody>
         </table>
-    </form>
+      </form>
     </div>
-);
+  );
 }
 
 export default CvAdd;

@@ -12,7 +12,3 @@ https://scotch.io/tutorials/implementing-smooth-scrolling-in-react
 npm install -S react-scroll
 
 ------------
-Write to json file
-https://www.npmjs.com/package/write-json-file
-npm install write-json-file
-

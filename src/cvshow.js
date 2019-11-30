@@ -6,12 +6,10 @@ import CvExport from './cvexport';
 
 
 const CvShow = (listOfCV) => {
- // console.log('props cvShow: ', listOfCV)
+  // console.log('props cvShow: ', listOfCV)
 
   const listItems = listOfCV.map((item, i) =>
-    <tr id={i.toString()}>
-      <td>{i + 1}.</td><td> {item.name}</td><td></td><td>{item.age}</td>
-    </tr>
+    <tr key={i}><td>{i + 1}.</td><td> {item.name}</td><td>{item.age}</td></tr>
   );
   const ExportCV = (event) => {
     event.preventDefault()
@@ -19,21 +17,21 @@ const CvShow = (listOfCV) => {
   }
   return (
     <div>
-    <div>
-      <p></p>
-      <table>
-        <tr><th>No.</th><th>Name</th><th></th><th>Age</th></tr>
-        <col width="10" />
-        <col width="20" />
-        <col width="20" />
-        {listItems}
-      </table>
-    </div>
-    <div>
-      <form onSubmit={ExportCV}>
-        <button type="submit">Export all CVs to PDF</button>
-      </form>
-    </div>
+      <div>
+        <p></p>
+        <table>
+          <tbody>
+            <tr>
+              <th width="50" align = "left">No.</th><th width="100" align = "left">Name</th><th width="20">Age</th></tr>
+            {listItems}
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <form onSubmit={ExportCV}>
+          <button type="submit">Export all CVs to PDF</button>
+        </form>
+      </div>
     </div>
   );
 }
