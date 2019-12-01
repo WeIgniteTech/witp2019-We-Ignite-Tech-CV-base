@@ -12,3 +12,11 @@ https://scotch.io/tutorials/implementing-smooth-scrolling-in-react
 npm install -S react-scroll
 
 ------------
+pdf Table
+npm install jspdf jspdf-autotable
+https://github.com/simonbengtsson/jsPDF-AutoTable
+
+----------
+database
+https://github.com/Airtable/airtable.js
+npm install airtable
