@@ -3,6 +3,9 @@ import CvExport from './cvexport';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
+//https://www.npmjs.com/package/jspdf
+//https://www.npmjs.com/package/jspdf-autotable
+
 // to show all available CVs
 
 
@@ -26,16 +29,24 @@ const CvShow = (listOfCV) => {
       );
       return showTableContent
     }
+    doc.setFontSize(22);
+    doc.setFontType("bold");
+    doc.text(80, 12, "WIT CV list");
     doc.autoTable({
+      margin: {top: 20},
       head: headRows(),
       body: bodyRows(),
       showHead: true,
-      // Note that the "id" key below is the same as the column's dataKey used for 
-      // the head and body rows. If your data is entered in array form instead you have to 
-      // use the integer index instead i.e. `columnStyles: {5: {fillColor: [41, 128, 185], ...}}`
+      headStyles:{
+        valign:'middle',
+        halign:'center'
+      },
       columnStyles: {
         id: { fillColor: [41, 128, 185], textColor: 255, fontStyle: 'bold' },
-        text: { cellWidth: 'auto' }
+        text: { cellWidth: 'auto' },
+        id:{columnWidth:10},
+        name:{columnWidth:100},
+        Age:{columnWidth:80},
       }
 
     });
