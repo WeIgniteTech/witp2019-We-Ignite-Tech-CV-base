@@ -15,7 +15,7 @@ const CvListData = () => {
     const fetch = require('node-fetch');
     const urlCV = 'https://api.airtable.com/v0/appHifVOL5knsbeGc/CV-base?api_key=keymR4xBC0cAWCtQX'
 
-    fetch(urlCV).then(res => res.json()).then((data) => {
+    const a = fetch(urlCV).then(res => res.json()).then((data) => {
         data.records.map((item, i) => {
             dataCV.push(item.fields)
         })
@@ -24,8 +24,8 @@ const CvListData = () => {
         console.log('Data CV[0] in fetch:', dataCV[0])
     })
     .catch(error => console.log('Error: ',error))
- 
-
+    
+    console.log(a)
     return dataCV
 }
 
