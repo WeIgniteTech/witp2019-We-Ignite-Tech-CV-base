@@ -2,36 +2,143 @@
 	{
 		"name": "Rahaf",
 		"age": 25,
-		"skills":"SQL, Koa",
-		"education":"Bachelor, University of Oslo",
-		"email":"rahaf@gmail.com"
+		"skills": "SQL, Koa, MS Access",
+		"education": "Bachelor, University of Oslo",
+		"email": "rahaf@gmail.com"
 	},
 	{
 		"name": "Nam",
 		"age": 28,
-		"skills":".Net, Javascript, Postman",
-		"education":"Master, Northumbria University",
-		"email":"nam@gmail.com"
+		"skills": ".Net, project lead, Postman",
+		"education": "Master, Northumbria University",
+		"email": "nam@gmail.com"
 	},
 	{
 		"name": "Tahir",
 		"age": 38,
-		"skills":".Net, Koa, Hadoop",
-		"education":"PhD, University of Helsinki",
-		"email":"tahir@yahoo.com"
+		"skills": ".Net, Koa, Hadoop",
+		"education": "PhD, University of Helsinki",
+		"email": "tahir@yahoo.com"
 	},
 	{
 		"name": "Vinh",
 		"age": 31,
-		"skills":"Apache, Koa",
-		"education":"Master, University of Bergen",
-		"email":"vinh@gmail.com"
+		"skills": "Apache, Koa",
+		"education": "Master, University of Bergen",
+		"email": "vinh@gmail.com"
 	},
 	{
 		"name": "Mhran",
 		"age": 29,
-		"skills":"PowerBI, Express",
-		"education":"Diploma, University of Bergen",
-		"email":"Mhran@gmail.com"
+		"skills": "PowerBI, Express, Postman",
+		"education": "Diploma, University of Bergen",
+		"email": "Mhran@gmail.com"
+	},
+	{
+		"name": "Sneha",
+		"age": 32,
+		"skills": "NoSQL, PowerBI, Express",
+		"education": "Master, University of Kankulta",
+		"email": "Sneha@yahoo.com"
+	},
+	{
+		"name": "Carl",
+		"age": 23,
+		"skills": "Koa, Vue, Apache, Express",
+		"education": "Master, University of Hamar",
+		"email": "carl@hotmail.com"
+	},
+	{
+		"name": "Sonia",
+		"age": 25,
+		"skills": "UI design, Express, CSS",
+		"education": "Master, University of Catalonia",
+		"email": "Sonia@gmail.com"
+	},
+	{
+		"name": "Boushra",
+		"age": 31,
+		"skills": "Java, Sharepoint, Cypress",
+		"education": "Diploma, University of Punjab",
+		"email": "boushra@yahoo.com"
+	},
+	{
+		"name": "Nevi",
+		"age": 29,
+		"skills": "Cypress, CSS, Photoshop",
+		"education": "Master, University of Halden",
+		"email": "nevi@gmail.com"
+	},
+	{
+		"name": "Rashid",
+		"age": 25,
+		"skills": "SQL, Koa",
+		"education": "Bachelor, University of Bombay",
+		"email": "rashid@gmail.com"
+	},
+	{
+		"name": "Nhat",
+		"age": 28,
+		"skills": ".Net, Javascript, Postman",
+		"education": "Master, Newcastle University",
+		"email": "nhat@gmail.com"
+	},
+	{
+		"name": "Punkali",
+		"age": 38,
+		"skills": ".Net, Koa, Hadoop",
+		"education": "PhD, University of Oslo",
+		"email": "punkali@yahoo.com"
+	},
+	{
+		"name": "Vinh",
+		"age": 31,
+		"skills": "Apache, Koa",
+		"education": "Master, University of Bergen",
+		"email": "vinh@gmail.com"
+	},
+	{
+		"name": "Amir",
+		"age": 29,
+		"skills": "PowerBI, Express, Postman",
+		"education": "Diploma, University of Yahz",
+		"email": "amir@gmail.com"
+	},
+	{
+		"name": "Joaquin",
+		"age": 32,
+		"skills": "NoSQL, PowerBI, Express",
+		"education": "Master, University of New York",
+		"email": "Joaquin@yahoo.com"
+	},
+	{
+		"name": "Simen",
+		"age": 23,
+		"skills": "Koa, Vue, Apache, Express",
+		"education": "Master, University of Stavanger",
+		"email": "simen@hotmail.com"
+	},
+	{
+		"name": "Casanova",
+		"age": 25,
+		"skills": "UI design, Express, CSS",
+		"education": "Master, University of Madrid",
+		"email": "casanova@gmail.com"
+	},
+	{
+		"name": "Sasa",
+		"age": 31,
+		"skills": "Java, Sharepoint, Cypress",
+		"education": "Diploma, University of Moskva",
+		"email": "sasa@yahoo.com"
+	},
+	{
+		"name": "Gary",
+		"age": 29,
+		"skills": "Cypress, CSS, Photoshop",
+		"education": "Master, University of York",
+		"email": "gary@gmail.com"
 	}
+
+
 ]

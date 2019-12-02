@@ -1,14 +1,10 @@
-https://www.npmjs.com/package/jspdf
-Using yarn:
-
-yarn add jspdf
-Using npm:
-
-npm install jspdf --save
-
 -------------
 create section and scroll function
 https://scotch.io/tutorials/implementing-smooth-scrolling-in-react
 npm install -S react-scroll
 
 ------------
+pdf Table
+npm install jspdf jspdf-autotable
+https://www.npmjs.com/package/jspdf
+https://github.com/simonbengtsson/jsPDF-AutoTable

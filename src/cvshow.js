@@ -63,10 +63,10 @@ const CvShow = (listOfCV) => {
           <tbody>
             <tr>
               <th width="5%" align="left">No.</th>
-              <th width="15%" align="left">Name</th>
+              <th width="12%" align="left">Name</th>
               <th width="5%">Age</th>
               <th width="30%">Skills</th>
-              <th width="30%">Education</th>
+              <th width="33%">Education</th>
               <th width="20%">Emails</th>
 
             </tr>
