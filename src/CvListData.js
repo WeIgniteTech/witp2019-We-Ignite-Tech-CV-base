@@ -16,7 +16,7 @@ const CvListData = () => {
     const urlCV = 'https://api.airtable.com/v0/appHifVOL5knsbeGc/CV-base?api_key=keymR4xBC0cAWCtQX'
 
     fetch(urlCV).then(res => res.json()).then((data) => {
-        data.records.map((item, i) => {
+        data.records.map((item) => {
             dataCV.push(item.fields)
         })
         dataCV=Object.values(dataCV)
