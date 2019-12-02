@@ -24,10 +24,8 @@ const CvListData = () => {
         console.log('Data CV[0] in fetch:', dataCV[0])
     })
     .catch(error => console.log('Error: ',error))
-    
-    //return an object not an Array
-    console.log('Data CV out fetch:', dataCV)
-    console.log('Data CV[0] out fetch:', dataCV[0])
+ 
+
     return dataCV
 }
 
