@@ -39,7 +39,7 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                Search CV
+                Search talents
               </Link>
             </li>
             <li className="nav-item">

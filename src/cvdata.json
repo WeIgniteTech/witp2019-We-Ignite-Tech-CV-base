@@ -1,22 +1,37 @@
 [
 	{
 		"name": "Rahaf",
-		"age": 25
+		"age": 25,
+		"skills":"SQL, Koa",
+		"education":"Bachelor, University of Oslo",
+		"email":"rahaf@gmail.com"
 	},
 	{
 		"name": "Nam",
-		"age": 28
+		"age": 28,
+		"skills":".Net, Javascript, Postman",
+		"education":"Master, Northumbria University",
+		"email":"nam@gmail.com"
 	},
 	{
 		"name": "Tahir",
-		"age": 38
+		"age": 38,
+		"skills":".Net, Koa, Hadoop",
+		"education":"PhD, University of Helsinki",
+		"email":"tahir@yahoo.com"
 	},
 	{
 		"name": "Vinh",
-		"age": 31
+		"age": 31,
+		"skills":"Apache, Koa",
+		"education":"Master, University of Bergen",
+		"email":"vinh@gmail.com"
 	},
 	{
-		"name": "Sneha",
-		"age": 29
+		"name": "Mhran",
+		"age": 29,
+		"skills":"PowerBI, Express",
+		"education":"Diploma, University of Bergen",
+		"email":"Mhran@gmail.com"
 	}
 ]

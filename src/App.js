@@ -45,8 +45,8 @@ function App() {
         >
         </Section>
         <Section
-          title='Search CV'
-          subtitle='Enter a name to search'
+          title='Search for talents'
+          subtitle='Enter the skill you need'
           dark={false}
           id='section2'
           htmlcode={CvSearch(listOfCV)}

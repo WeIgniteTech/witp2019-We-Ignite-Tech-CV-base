@@ -5,9 +5,12 @@ import CvShow from './cvshow'
 const CvAdd = (listOfCV) => {
   const [newName, setName] = useState('')
   const [newAge, setAge] = useState('')
+  const [newSkill, setSkill] = useState('')
+  const [newEducation, setEducation] = useState('')
+  const [newEmail, setEmail] = useState('')
   const [newCV, setNewCV] = useState({
     addCVlist: [[{ name: '' }, { age: '' }]],
-    stage:0
+    stage: 0
   })
 
   const handleNameChange = (event) => {
@@ -19,24 +22,38 @@ const CvAdd = (listOfCV) => {
     console.log('Target Age: ', event.target.value)
     setAge(event.target.value)
   }
+  const handleSkillChange = (event) => {
+    console.log('Target Age: ', event.target.value)
+    setSkill(event.target.value)
+  }
+  const handleEducationChange = (event) => {
+    console.log('Target Age: ', event.target.value)
+    setEducation(event.target.value)
+  }
+  const handleEmailChange = (event) => {
+    console.log('Target Age: ', event.target.value)
+    setEmail(event.target.value)
+  }
 
   const AddCV = (event) => {
     event.preventDefault()
     //console.log('button clicked', event.target)
-    const person = [{ name: newName, age: newAge }]
+    const person = [{ name: newName, age: newAge, skills: newSkill , education: newEducation, email: newEmail   }]
     console.log('CV to add:', person)
-    if (listOfCV.some(personCheck => personCheck.name === person[0].name)) {
-      const warning = newName + ' is alreardy in the CV database'
+    if (listOfCV.some(personCheck => personCheck.name.toUpperCase() === person[0].name.toUpperCase())) {
+      const warning = newName.toUpperCase() + ' is alreardy in the CV database'
       window.alert(warning)
     } else {
-      
-      setAge('')
       setName('')
-      if (newCV.stage===0) {setNewCV(person,1)} else {setNewCV(newCV.concat(person[0]),1)}
+      setAge('')
+      setSkill('')
+      setEducation('')
+      setEmail('')
+      if (newCV.stage === 0) { setNewCV(person, 1) } else { setNewCV(newCV.concat(person[0]), 1) }
       listOfCV.push(person[0])
       // console.log('person add:', person)
       // console.log('CV list after add:', listOfCV)
-      }
+    }
   }
 
   const ShowAddCv = () => {
@@ -45,16 +62,16 @@ const CvAdd = (listOfCV) => {
     if (newCV.stage === 0) {
       return (
         <div>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
       )
     } else {
-      console.log('List add CV:',newCV)
+      console.log('List add CV:', newCV)
       return (
         <div>
           <p>Added CV</p>
           {CvShow(newCV)}
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
       )
     }
@@ -68,10 +85,13 @@ const CvAdd = (listOfCV) => {
           <tbody>
             <tr><td>Name: </td><td><input value={newName} onChange={handleNameChange} /></td></tr>
             <tr><td>Age: </td><td><input value={newAge} onChange={handleAgeChange} /></td></tr>
+            <tr><td>Skills: </td><td><input value={newSkill} onChange={handleSkillChange} /></td></tr>
+            <tr><td>Education: </td><td><input value={newEducation} onChange={handleEducationChange} /></td></tr>
+            <tr><td>Email: </td><td><input value={newEmail} onChange={handleEmailChange} /></td></tr>
             <tr><td></td><td align='center'><button type="submit">Add</button></td></tr>
           </tbody>
         </table>
-       
+
       </form>
       {ShowAddCv()}
     </div>

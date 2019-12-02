@@ -65,7 +65,6 @@ const CvSearch = (listOfCV) => {
         <div>
           <button type="submit">Search</button></div>
       </form>
-
       {resultSearch()}
     </div>
 
