@@ -1,5 +1,4 @@
 import React from 'react';
-import CvExport from './cvexport';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
