@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Section from './Components/Section';
@@ -11,11 +11,24 @@ import CvListData from './cvListData';
 
 
 
-const listOfCV = CvListData();
-console.log('list of CV in App: ', listOfCV);
 
-const App = () => {
-    return (
+
+
+function App ()  {
+  const listOfCV = CvListData()
+  // const [listOfCV, setListOfCV] = useState([])
+  // const [loading, setLoadingState] = useState(false)
+  // useEffect(()=>{
+  //   setLoadingState(true)
+  // CvListData().then(IncomingData =>{
+  //     setListOfCV(IncomingData);
+  //     setLoadingState(false)
+  //   });
+  // }, [])
+
+  // console.log('list of CV in App: ', listOfCV);
+  // console.log('list of CV in App: 0 ', listOfCV[0]);  
+  return (
       <div className='App'>
         <Navbar />
         <Section

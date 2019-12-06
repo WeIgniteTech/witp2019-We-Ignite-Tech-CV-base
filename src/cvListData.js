@@ -1,7 +1,5 @@
-
-
-import { useState, useEffect} from "react";
-
+// return an array of CV objects from airtable database
+import React, { useEffect, useState } from 'react';
 //API ID: keymR4xBC0cAWCtQX
 //base ID: appHifVOL5knsbeGc
 //link to data https://api.airtable.com/v0/appHifVOL5knsbeGc/CV-base?api_key=keymR4xBC0cAWCtQX
@@ -10,20 +8,33 @@ import { useState, useEffect} from "react";
 //https://flaviocopes.com/airtable/
 
 
-// return an array of CV objects from airtable database
-const CvListData = () => {
-  const  [hasError, setErrors] =  useState(false)
-  const  [dataCV,setDataCV ]= useState({})
+function CvListData() {
+  const [listOfCV, setListOfCV] = useState([])
+  // const [loading, setLoadingState] = useState(false)
+  let listTemp=[]
+  function fetchData() {
+    fetch('https://api.airtable.com/v0/appHifVOL5knsbeGc/CV-base?api_key=keymR4xBC0cAWCtQX')
+    .then(res => res.json())
+    .then(json => {
+        setListOfCV(json.records)
+    })
+      .catch(err => {
+        console.log(err)
+      })
 
-  useEffect(() =>{
-    async function fetchData(){
-    const res = await fetch("https://api.airtable.com/v0/appHifVOL5knsbeGc/CV-base?api_key=keymR4xBC0cAWCtQX")
-      .then(res => res.json())
-      .then(res => this.setState({ dataCV: res }))
-      .catch(() => this.setState({ hasErrors: true }));
-      console.log('Data CV:', dataCV)
-    }
   }
-    return dataCV;
-  }
+
+  useEffect(() => {
+    fetchData()
+
+  }, [])
+
+  listOfCV.map(item => listTemp.push(item.fields))
+  
+  console.log('useEffect function', listTemp)
+ 
+  return listTemp
+
+}
+
 export default CvListData;
