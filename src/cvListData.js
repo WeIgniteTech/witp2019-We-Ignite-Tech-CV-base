@@ -10,23 +10,19 @@ import { useEffect, useState } from 'react';
 
 function CvListData() {
   const [listOfCV, setListOfCV] = useState([])
-  const [loading, setLoading] = useState(false)
   // const [loading, setLoadingState] = useState(false)
   let listTemp = []
-  let listTemp2
   function fetchData() {
-
     fetch('https://api.airtable.com/v0/appHifVOL5knsbeGc/CV-base?api_key=keymR4xBC0cAWCtQX')
       .then(res => res.json())
       .then(json => {
         setListOfCV(json.records)
-        
+
       })
       .catch(err => {
         console.log(err)
       })
-
-    }
+  }
 
   useEffect(() => {
     fetchData()
@@ -34,7 +30,7 @@ function CvListData() {
 
   listOfCV.map(item => listTemp.push(item.fields))
 
-  console.log('listTemp to return', listTemp)
+  //console.log('listTemp to return', listTemp)
 
   return listTemp
 

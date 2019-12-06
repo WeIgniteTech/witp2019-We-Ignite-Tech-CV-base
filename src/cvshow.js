@@ -9,7 +9,7 @@ import 'jspdf-autotable';
 
 
 const CvShow = (listOfCV) => {
-  console.log('List cvShow: ', listOfCV)
+  //console.log('List cvShow: ', listOfCV)
 
   const listItems = listOfCV.map((item, i) =>
     <tr key={i}><td>{i + 1}.</td>

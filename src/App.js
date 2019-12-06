@@ -8,7 +8,7 @@ import CvSearch from './cvsearch'; //Rahah - ser etter CV med et navn
 
 import CvShow from './cvshow';  // viser alle CVer på nettsider
 import CvListData from './cvListData';
-import CvList from './cvlist';
+
 
 
 
@@ -16,19 +16,6 @@ import CvList from './cvlist';
 
 function App ()  {
   const listOfCV=CvListData();
-  //const listOfCV=CvList();
-  // const [listOfCV, setListOfCV] = useState([])
-  // const [loading, setLoadingState] = useState(false)
-  // useEffect(()=>{
-  //   setLoadingState(true)
-  // CvListData().then(IncomingData =>{
-  //     setListOfCV(IncomingData);
-  //     setLoadingState(false)
-  //   });
-  // }, [])
-
-  // console.log('list of CV in App: ', listOfCV);
-  // console.log('list of CV in App: 0 ', listOfCV[0]);  
 
   return (
       <div className='App'>
