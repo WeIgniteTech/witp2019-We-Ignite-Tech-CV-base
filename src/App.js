@@ -10,10 +10,6 @@ import CvShow from './cvshow';  // viser alle CVer på nettsider
 import CvListData from './cvListData';
 
 
-
-
-
-
 function App ()  {
   const listOfCV=CvListData();
 
@@ -28,8 +24,8 @@ function App ()  {
           A Step Closer To Your IT Career In Norway.
           '
          htmlcode={CvShow(listOfCV)}
-          dark={true}
-          id='section1'
+         dark={true}
+         id='section1'
           
         >
         </Section>
