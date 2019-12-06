@@ -8,3 +8,10 @@ pdf Table
 npm install jspdf jspdf-autotable
 https://www.npmjs.com/package/jspdf
 https://github.com/simonbengtsson/jsPDF-AutoTable
+
+--------------------------
+
+all in one command
+npm install react-scroll jspdf jspdf-autotable -save
+
+ npm install use-data-api

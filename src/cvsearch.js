@@ -9,7 +9,7 @@ const CvSearch = (listOfCV) => {
   const [newSkill, setSkill] = useState('');
 
   const resultSearch = () => {
-    console.log('Found after run:', found)
+    //console.log('Found after run:', found)
     if (found === 1) {
       console.log('CV is found')
       return (
@@ -37,16 +37,17 @@ const CvSearch = (listOfCV) => {
     foundCV = [[]]
     listOfCV.map((item) => {
       const listSkill = item.skills.toString().replace(/, /gi, ",").split(',')
-      console.log('ListSkill', listSkill)
+      //console.log('ListSkill', listSkill)
       listSkill.map((skillItem) => {
         if (skillItem.toString().toUpperCase() === newSkill.toUpperCase()) {
           foundCV[foundNumber] = item
           foundNumber++
-          console.log(item.skills)
-          console.log(skillItem)
+          // console.log(item.skills)
+          // console.log(skillItem)
         }
-
+        return found //not necessary to return this object
       });
+      return found //not necessary to return this object
     }
     )
     if (foundNumber > 0) { found = 1 } else {found = 0}

@@ -9,7 +9,7 @@ import 'jspdf-autotable';
 
 
 const CvShow = (listOfCV) => {
-  // console.log('props cvShow: ', listOfCV)
+  //console.log('List cvShow: ', listOfCV)
 
   const listItems = listOfCV.map((item, i) =>
     <tr key={i}><td>{i + 1}.</td>
@@ -19,6 +19,7 @@ const CvShow = (listOfCV) => {
       <td>{item.education}</td>
       <td>{item.email}</td>
     </tr>
+  
   );
   const ExportCV = (event) => {
     event.preventDefault()
