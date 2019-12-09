@@ -21,7 +21,11 @@ npm install react-scroll jspdf jspdf-autotable -save
 
  -----------
  Heroku
- https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+ https://dev.to/smithmanny/deploy-your-react-app-to-heroku-2b6f
+ 
  npm install -g heroku
  heroku login
- 
+
+
+
+

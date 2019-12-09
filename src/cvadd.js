@@ -51,13 +51,13 @@ const CvAdd = (listOfCV) => {
 
       }
     ], function (err, records) {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      records.forEach(function (record) {
-        console.log(record.getId());
-      });
+      // if (err) {
+      //   console.error(err);
+      //   return;
+      // }
+      // // records.forEach(function (record) {
+      // //   console.log(record.getId());
+      // });
     });
     console.log('added');
   }
@@ -81,14 +81,18 @@ const CvAdd = (listOfCV) => {
       else {
         setNewCV(newCV.concat(person[0]), 1)
       }
-     //AddAirTable(person[0]);
       // console.log('person add:', person)
       // console.log('CV list after add:', listOfCV)
     }
   }
-  const AddCVToDatabase = () => {
+  const AddCVToDatabase = (event) => {
+    event.preventDefault()
+    console.log('newCV in AddCV to database', newCV)
     newCV.map(item => AddAirTable(item))
     console.log('Add to database done')
+    setNewCV([[{ name: '' }, { age: '' }]], 0);
+    window.alert('The database was update successfully')
+    window.location.reload(true)
   }
   const ShowAddCv = () => {
     // console.log('List added CV before add:', newCV)
@@ -122,7 +126,7 @@ const CvAdd = (listOfCV) => {
             <tr><td>Education: </td><td><input value={newEducation} onChange={handleEducationChange} /></td></tr>
             <tr><td>Email: </td><td><input value={newEmail} onChange={handleEmailChange} /></td></tr>
             <tr><td></td><td align='center'><button type="submit">Add</button></td></tr>
-            
+
 
           </tbody>
         </table>
