@@ -38,7 +38,7 @@ const CvAdd = (listOfCV) => {
   }
 
   const AddAirTable = (props) => {
-    console.log('in Airtable', props)
+    console.log('in AddAirtable', props)
     base('CV-base').create([
       {
         "fields": {
@@ -81,7 +81,7 @@ const CvAdd = (listOfCV) => {
       else {
         setNewCV(newCV.concat(person[0]), 1)
       }
-      AddAirTable(person[0]);
+     //AddAirTable(person[0]);
       // console.log('person add:', person)
       // console.log('CV list after add:', listOfCV)
     }

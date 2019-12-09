@@ -14,4 +14,14 @@ https://github.com/simonbengtsson/jsPDF-AutoTable
 all in one command
 npm install react-scroll jspdf jspdf-autotable -save
 
- npm install use-data-api
+ 
+
+ -------------------
+ npm install airtable
+
+ -----------
+ Heroku
+ https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+ npm install -g heroku
+ heroku login
+ 
