@@ -7,7 +7,7 @@
     "airtable": "^0.8.1",
     "axios": "^0.19.0",
     "http-status": "^1.4.0",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "jspdf-autotable": "^3.2.11",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
